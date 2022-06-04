@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/brettnguyen/UIProject.git"
   },
-  "author": "Brett",
+  "author": "Brett Nguyen",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/brettnguyen/UIProject/issues"
