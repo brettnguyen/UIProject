@@ -6,8 +6,8 @@ Comments can be created, edited, and deleted. Comments have a username attached 
 You can delete peoples comments on your page.
 
 
-**<h2>ERD:</h2>**
+**<h1>ERD:</h1>**
 ![Comment App](https://user-images.githubusercontent.com/77566307/171983869-5aa8a92f-e52b-4f44-91b0-460983dc1602.png)
-=======
+
 
 
