@@ -4,17 +4,22 @@
   "description": "**<h1>People review app:</h1>** A fun review app of people. Users create profiles and post urls of there social media accounts  in there bio so people can put a username to a face and leave comments of what they think about the person. Comments can be created, edited, and deleted. Comments have a username attached to them. You can comment on your own profile. You can delete peoples comments on your page.",
   "main": "index.js",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "bootstrap": "^5.2.0-beta1",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "mongodb": "^4.7.0",
-    "mongoose": "^6.3.6"
+    "mongoose": "^6.3.6",
+    "tar": "^6.1.11"
   },
   "devDependencies": {
+    "concurrently": "^7.2.2",
     "nodemon": "^2.0.16"
   },
   "scripts": {
-    "dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "nodemon index.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
