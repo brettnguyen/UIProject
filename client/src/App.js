@@ -1,10 +1,13 @@
 
+import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./components/Login.js";
 import Navbar from './components/Navbar.js';
 import Register from './components/Register.js';
 import Profile from './components/Profile.js';
+
+
 
 function App() {
   return (

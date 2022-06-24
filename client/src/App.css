@@ -1,11 +1,78 @@
 
+#log {
+    font-family: 'Secular One', sans-serif;
+    font-size: 36px;
+    color: #0D6EFD;
 
+}
 
+.user
+{
+    font-family: 'Secular One', sans-serif;
+    color: #0D6EFD;
+}
 
+.pass
+{
+    font-family: 'Secular One', sans-serif;
+    color: #0D6EFD;
+}
 
+#rem
+{
+    font-family: 'Secular One', sans-serif;
+    color: #0D6EFD;
+    margin-right: 10px;
 
+}
 
+#Register
+{
+    font-family: 'Secular One', sans-serif;
+    font-size: 36px;
+    color: #0D6EFD;
+}
 
+.email
+{
+    font-family: 'Secular One', sans-serif;
+    color: #0D6EFD; 
+}
+
+.userimage
+{
+    height: 120px;
+    width: 120px;
+}
+
+.P-user
+{
+    margin-left: 5px;
+    height: 40px;
+    width: 40px;
+    position: relative;
+    
+}
+
+#bar
+{
+  background-color: #104667;
+  width: 100%;
+  height: 5px;
+}
+
+.post
+{
+    margin-top: 10px;
+   position: relative;
+}
+
+#postinfo
+{
+    height: 50px;
+    border-color: #104667;
+    border-radius: 10px;
+}
 
 
 
