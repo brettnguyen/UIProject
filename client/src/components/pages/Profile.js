@@ -87,7 +87,7 @@ const Profile = () => {
           {/* this post parameter becomes each singular post */}
           {posts.map((item) => (
             <li key={item._id}>
-              {item.post}
+              {item.post} {item.username}
             </li>
           ))}
         </ul>

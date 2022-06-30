@@ -10,17 +10,15 @@ import Profile from './components/pages/Profile.js';
 
 
 function App() {
-  
   return (
     <div className="App">
       <Router>
       <Navbar />
 
       <Routes>
-        <Route path='/' element={<Login />}/>
+        <Route path='/'  element={<Login />}/>
         <Route path='/Register' element={<Register />}/>
         <Route path='/Profile' element={<Profile />}/>
-        
       </Routes>
       </Router>
    

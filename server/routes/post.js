@@ -6,8 +6,8 @@ router
 
 .get('/showPosts', async (req, res) => {
     try {
-      const post = await Post.showPosts(req.body.post, req.body.username);
-      res.send(post);
+      const posted = await Post.showPosts(req.body.post, req.body.username);
+      res.send(posted);
     } catch(err) {
       res.status(401).send({message: err.message});
     }

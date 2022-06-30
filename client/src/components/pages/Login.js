@@ -30,7 +30,9 @@ const Login = () => {
       if(!data.message) {
         setCurrentUser(data);
         console.log(data)
+        
         navigate("/Profile")
+        //window.location.reload();
       }
     })  
     .catch((error) => {

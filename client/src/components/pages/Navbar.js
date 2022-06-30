@@ -2,6 +2,7 @@ import React from 'react';
 import {  Link } from "react-router-dom";
 
 const Navbar = () => {
+  
     return (
       <div>
         <nav className="navbar text-center">
@@ -14,7 +15,7 @@ const Navbar = () => {
             <div className="collapse navbar-collapse " id="navbarNav">
               <ul className="navbar-nav ">
               <li  >
-                <Link to="/">Login</Link>
+                <Link to="/" >Login</Link>
                 </li>
                 
                 <li >
@@ -22,7 +23,7 @@ const Navbar = () => {
                 </li>
 
                 <li >
-                <Link to="/Profile">Profile</Link>
+                <Link to="/Profile" >Profile</Link>
                 </li>
               </ul>
             </div>
