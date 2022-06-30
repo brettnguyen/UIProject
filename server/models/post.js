@@ -5,13 +5,15 @@ const mongoose = require("mongoose");
 const postSchema = new mongoose.Schema({
 
  // id: { type: mongoose.Schema.Types.ObjectId, ref: "User"},
+  username:  {type:String },
   post:  {type:String }
 })
 
 const Post = mongoose.model("Post", postSchema);
 
-async function createPost( post) {
+async function createPost( post, username) {
     const newPost = await Post.create({
+      username: username,
      post: post
     });
     return newPost;

@@ -6,7 +6,7 @@ router
 
 .get('/showPosts', async (req, res) => {
     try {
-      const post = await Post.showPosts(req.body.post);
+      const post = await Post.showPosts(req.body.post, req.body.username);
       res.send(post);
     } catch(err) {
       res.status(401).send({message: err.message});
@@ -15,7 +15,7 @@ router
 
   .post('/createPost', async (req, res) => {
     try {
-      const post = await Post.createPost(req.body.post);
+      const post = await Post.createPost(req.body.post, req.body.username);
       res.send({...post, post: undefined});
     } catch(error) {
       res.status(401).send({ message: error.message }); 

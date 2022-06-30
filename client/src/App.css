@@ -18,6 +18,12 @@
     color: #0D6EFD;
 }
 
+.pass2
+{
+    font-family: 'Secular One', sans-serif;
+    color: #0D6EFD;
+}
+
 #rem
 {
     font-family: 'Secular One', sans-serif;
@@ -67,14 +73,18 @@
    position: relative;
 }
 
-#postinfo
+#post
 {
     height: 50px;
     border-color: #104667;
     border-radius: 10px;
 }
 
-
+.user-input
+{
+    display: none;
+    visibility: hidden;
+}
 
 
 
