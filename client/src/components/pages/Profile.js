@@ -3,26 +3,26 @@ import Logo from "./usericon.svg";
 import { Player, Controls } from '@lottiefiles/react-lottie-player';
 import { getCurrentUser } from "../../main.js";
 import { fetchData } from "../../main.js";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-fetch('http://localhost:5000/post/showPosts').then(function(response) { 
-  // Convert to JSON
-  return response.json();
-}).then(function(j) {
-  var t =  JSON.stringify(j.note),  ul = document.createElement('ul');
-  document.getElementById('results').appendChild(ul);
-  j.forEach(item => {
-    let li = document.createElement('li');
-    li.value = item.post
-    ul.appendChild(li)
-    li.innerHTML += item.post;
-  })
-  console.log(j);
-})
+
 
 const Profile = () => {
+  const [posts, setPosts] = useState([]);
+  useEffect(() => {
+      fetch("http://localhost:5000/post/showPosts")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        //this sets posts hook array variable to "data"
+        setPosts(data);
+        // console.log(data);
+     
+      });
+  })
   let user = getCurrentUser();
- 
+
   const [postinfo, setPost] = useState({
     username: getCurrentUser().username, 
     post: ''
@@ -83,6 +83,14 @@ const Profile = () => {
           
         </form>
         <div className="Results" id="results">
+        <ul>
+          {/* this post parameter becomes each singular post */}
+          {posts.map((item) => (
+            <li key={item._id}>
+              {item.post}
+            </li>
+          ))}
+        </ul>
          </div>
       </div>
       </div>
