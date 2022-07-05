@@ -24,6 +24,10 @@ async function createPost( post, username) {
    return post;
  }
 
+ async function specificPost(username) {
+  const post = await Post.findOne({"username": username});
+ return post;
+}
 
   async function dPosts(post) {
     return await Post.deleteMany({"post": post});
@@ -36,6 +40,6 @@ async function createPost( post, username) {
 }
 
   module.exports = { 
-    createPost, showPosts, dPosts, updatePost
+    createPost, showPosts, dPosts, updatePost, specificPost
   };
 

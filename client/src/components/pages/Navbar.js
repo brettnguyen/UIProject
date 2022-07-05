@@ -1,6 +1,7 @@
 import React from 'react';
 import {  Link } from "react-router-dom";
 
+
 const Navbar = () => {
   function myFunction() {
     console.log("handleCollapse");
@@ -8,6 +9,7 @@ const Navbar = () => {
     var btn = document.getElementById("navbarBtn");
     nav.classList.remove("show");
     btn.classList.add("collapsed");
+
 }
 
     return (

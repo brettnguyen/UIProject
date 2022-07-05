@@ -13,6 +13,15 @@ router
     }
   })
 
+  .get('/specificPost', async (req, res) => {
+    try {
+      const posted = await Post.specificPost(req.body.username);
+      res.send(posted);
+    } catch(err) {
+      res.status(401).send({message: err.message});
+    }
+  })
+
   .post('/createPost', async (req, res) => {
     try {
       const post = await Post.createPost(req.body.post, req.body.username);

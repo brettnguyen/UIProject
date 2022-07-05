@@ -33,3 +33,4 @@ export async function fetchData(route='', data={}, methodType) {
     return JSON.parse(localStorage.getItem('users'));
   }
   
+
