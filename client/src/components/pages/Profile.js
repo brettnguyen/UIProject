@@ -16,7 +16,7 @@ const Profile = () => {
   const [posts, setPosts] = useState([]);
  
   useEffect(() => {
-      fetch("http://localhost:5000/post/showPosts")
+      fetch("/post/showPosts")
       .then((response) => {
         return response.json();
       })
