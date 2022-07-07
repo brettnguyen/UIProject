@@ -14,9 +14,12 @@ mongoose.connect(process.env.dbURL)
 app.use(express.json());
 
 app.use(express.static(__dirname + "/client/build"));
-app.get('/', (req, res) => res.sendFile(path.join(__dirname, "/client/build" ,"index.html")))
-
-
+app.get('/*', (req, res) => {
+  let url = path.join(__dirname, '../client/build', 'index.html');
+  if (!url.startsWith('/app/')) // we're on local windows
+    url = url.substring(1);
+  res.sendFile(url);
+});
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");  
