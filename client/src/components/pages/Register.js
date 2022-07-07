@@ -22,7 +22,8 @@ const Register = () => {
     fetchData("/user/register", 
       {
        username,
-       password
+       password,
+       password2
       }, 
       "POST")
     .then((data) => {
