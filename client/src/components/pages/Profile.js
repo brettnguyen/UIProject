@@ -16,7 +16,7 @@ const Profile = () => {
   const [posts, setPosts] = useState([]);
  
   useEffect(() => {
-      fetch("/post/showPosts")
+      fetch("https://a-comment.herokuapp.com//post/showPosts")
       .then((response) => {
         return response.json();
       })
