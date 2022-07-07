@@ -19,6 +19,7 @@ export async function fetchData(route='', data={}, methodType) {
     }
   }
 
+
   export function setCurrentUser(user) {
     localStorage.setItem('users', JSON.stringify(user));
   }
