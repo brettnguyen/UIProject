@@ -16,17 +16,6 @@ app.use(express.json());
 app.use(express.static(__dirname + "/client/build"));
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, "/client/build" ,"index.html")))
 
-app.get('/', (req, res, next) => {
-
-  res.status(200).json({
-      status: 'success',
-      data: {
-          name: 'name of your app',
-          version: '0.1.0'
-      }
-  });
-
-});
 
 
 app.use(function(req, res, next) {
