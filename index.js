@@ -17,7 +17,7 @@ app.use(express.static(__dirname + "/client/build"));
 
 
 app.get("*", function (request, response) {
-  response.sendFile(path.resolve(__dirname, "/client/build", "index.html"));
+  response.sendFile(path.resolve(__dirname, "../client/build", "index.html"));
 });
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");  
