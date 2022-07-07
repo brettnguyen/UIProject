@@ -2,7 +2,7 @@ import { Player, Controls } from '@lottiefiles/react-lottie-player';
 import { fetchData } from "../../main.js";
 
 import { useNavigate } from "react-router-dom";
-
+import { setCurrentUser } from "../../main.js";
 
 import { useContext } from "react";
 import UserContext from "../../context/userContext.js";
@@ -29,6 +29,7 @@ const Register = () => {
     .then((data) => {
       if(!data.message) {
         updateUser("authenticated", true)
+        setCurrentUser(data);
         navigate("/Profile")
       }
     })  

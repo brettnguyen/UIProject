@@ -192,3 +192,10 @@
    width: 100%;
    text-align: center;
 }
+
+.Reg-link
+{
+    color: #0D6EFD;
+    text-decoration: underline;
+    cursor: pointer;
+}
