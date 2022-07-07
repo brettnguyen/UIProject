@@ -18,8 +18,8 @@ function App() {
 
       <Routes>
         <Route path='/'  element={<Login />}/>
-        <Route path='/register.js' element={<Register />}/>
-        <Route path='/profile.js' element={<Profile />}/>
+        <Route path='/Register' element={<Register />}/>
+        <Route path='/Profile' element={<Profile />}/>
       </Routes>
       </Router>
       </UserProvider>

@@ -2,9 +2,20 @@ import React from 'react';
 import { Outlet, Link } from "react-router-dom";
 import UserContext from "../../context/userContext";
 import { useContext, Fragment } from "react";
-
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  function myRegFunction() {
+  
+    navigate("/Register")
+    console.log("handleCollapse");
+    var nav = document.getElementById("navbarNav");
+    var btn = document.getElementById("navbarBtn");
+    nav.classList.remove("show");
+    btn.classList.add("collapsed");
+}
+
 
   const { user } = useContext(UserContext);
 
@@ -39,7 +50,7 @@ const Navbar = () => {
                 </li>
                 
                 <li>
-                <Link to="/register.js" onClick={myFunction}>Register</Link>
+                <label  onClick={myRegFunction}>hello</label>
                 </li>
 
                 
