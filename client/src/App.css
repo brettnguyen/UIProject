@@ -90,11 +90,7 @@
 }
 
 
-.user-input
-{
-    display: none;
-    visibility: hidden;
-}
+
 
 #list
 {
@@ -153,6 +149,16 @@
     line-height: 0px;   
 }
 
+#Fbtn
+{
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    height: 20px;
+    line-height: 0px;  
+    display: none;
+}
+
 .OP-user
 {
     margin-top: 35px ;
@@ -170,10 +176,19 @@
  
 
     z-index: 0;
- padding-bottom: 40px;
+    padding-bottom: 40px;
     background-color: #94CBFF;
 }
 
 #test::-webkit-scrollbar {
     display: none;
+}
+
+.change
+{
+   display: none;
+   border-radius: 5px;
+   border-color: transparent;
+   width: 100%;
+   text-align: center;
 }

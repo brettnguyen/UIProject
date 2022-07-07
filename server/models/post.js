@@ -5,16 +5,19 @@ const mongoose = require("mongoose");
 const postSchema = new mongoose.Schema({
 
  // id: { type: mongoose.Schema.Types.ObjectId, ref: "User"},
+  
   username:  {type:String },
-  post:  {type:String }
+  post:  {type:String },
+  page:  {type:String }
 })
 
 const Post = mongoose.model("Post", postSchema);
 
-async function createPost( post, username) {
+async function createPost( post, username, page) {
     const newPost = await Post.create({
       username: username,
-     post: post
+     post: post,
+     page: page
     });
     return newPost;
   }
@@ -24,14 +27,15 @@ async function createPost( post, username) {
    return post;
  }
 
- async function specificPost(username) {
-  const post = await Post.findOne({"username": username});
- return post;
-}
+
 
   async function dPosts(post) {
     return await Post.deleteMany({"post": post});
  }
+
+ async function deletePost(id) {
+  return await Post.deleteOne({"_id": id});
+}
 
 
  async function updatePost(id, post) {
@@ -40,6 +44,6 @@ async function createPost( post, username) {
 }
 
   module.exports = { 
-    createPost, showPosts, dPosts, updatePost, specificPost
+    createPost, showPosts, dPosts, updatePost, deletePost
   };
 

@@ -6,12 +6,13 @@ import Login from "./components/pages/Login.js";
 import Navbar from './components/pages/Navbar.js';
 import Register from './components/pages/Register.js';
 import Profile from './components/pages/Profile.js';
-
+import { UserProvider } from './context/userContext';
 
 
 function App() {
   return (
     <div className="App">
+       <UserProvider>
       <Router>
       <Navbar />
 
@@ -21,7 +22,7 @@ function App() {
         <Route path='/Profile' element={<Profile />}/>
       </Routes>
       </Router>
-   
+      </UserProvider>
     </div>
   );
 }

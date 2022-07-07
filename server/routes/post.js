@@ -13,23 +13,26 @@ router
     }
   })
 
-  .get('/specificPost', async (req, res) => {
-    try {
-      const posted = await Post.specificPost(req.body.username);
-      res.send(posted);
-    } catch(err) {
-      res.status(401).send({message: err.message});
-    }
-  })
 
   .post('/createPost', async (req, res) => {
     try {
-      const post = await Post.createPost(req.body.post, req.body.username);
+      const post = await Post.createPost(req.body.post, req.body.username, req.body.page);
       res.send({...post, post: undefined});
     } catch(error) {
       res.status(401).send({ message: error.message }); 
     }
   })
+
+
+  .delete('/deletePost', async (req, res) => {
+    try {
+      await Post.deletePost(req.body.id);
+      res.send({ success: "Post deleted" });
+    } catch(error) {
+      res.status(401).send({ message: error.message });
+    }
+  })
+
   .delete('/dPosts', async (req, res) => {
     try {
       await Post.dPosts(req.body.post);
