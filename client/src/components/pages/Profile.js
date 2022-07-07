@@ -22,7 +22,7 @@ const Profile = () => {
       })
       .then((data) => {
       
-          setPosts(data);
+          //setPosts(data);
    
      
       });
