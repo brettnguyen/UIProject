@@ -8,7 +8,7 @@ import Register from './components/pages/Register.js';
 import Profile from './components/pages/Profile.js';
 import { UserProvider } from './context/userContext';
 
-//<Route path='/'  element={<Login />}/>
+
 function App() {
   return (
     <div className="App">
@@ -17,9 +17,9 @@ function App() {
       <Navbar />
 
       <Routes>
-        
-        <Route path='/Register' element={<Register />}/>
-        <Route path='/Profile' element={<Profile />}/>
+        <Route path='/'  element={<Login />}/>
+        <Route path='/register' element={<Register />}/>
+        <Route path='/profile' element={<Profile />}/>
       </Routes>
       </Router>
       </UserProvider>

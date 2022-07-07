@@ -39,7 +39,7 @@ const Navbar = () => {
                 </li>
                 
                 <li>
-                <Link to="/Register" onClick={myFunction}>Register</Link>
+                <Link to="/register" onClick={myFunction}>Register</Link>
                 </li>
 
                 
